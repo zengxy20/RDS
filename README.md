@@ -9,9 +9,9 @@ bash scripts/forward.sh
 2. Replace the evaluate.py with our released one, as we only use the hidden state of the original queries without any safety prompt.
 3. To Train the classifier, run:
 ```
-python evaluate.py \
-    --config sampling --evaluator_path ${HF_MODELS}/meta-llama/LlamaGuard-7b \
-    --model_names ${model_name}
+python estimate.py \
+    --system_prompt_type ${system_prompt_type} \
+    --config sampling --pretrained_model_path ${model}
 ```
    
 ## Add the classifier to the decoder layer of LLMs
