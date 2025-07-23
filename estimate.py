@@ -57,7 +57,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--pretrained_model_path", type=str, required=True)
     parser.add_argument("--config", type=str, choices=["greedy", "sampling"], required=True)
-    parser.add_argument("--output_path", type=str, default='./estimations_xstest_middle1')
+    parser.add_argument("--output_path", type=str, default='./estimations')
     parser.add_argument("--system_prompt_type", type=str, choices=['all'], required=True)
     parser.add_argument("--n_splits", type=int, default=10)
     args = parser.parse_args()
@@ -67,7 +67,7 @@ def main():
         logging.info(f"{k}: {v}")
 
     # prepare data
-    dataset = 'xstest'
+    dataset = 'custom'
     with open(f"./data/{dataset}.txt") as f:
         lines = f.readlines()
     with open(f"./data_harmless/{dataset}.txt") as f:
