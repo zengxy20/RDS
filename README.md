@@ -16,5 +16,9 @@ python evaluate.py \
    
 ## Add the classifier to the decoder layer of LLMs
 During refering, RDS extends EAGLE_Head (https://github.com/SafeAILab/EAGLE) in resampling process to generate the hidden state of the candidate tokens. 
-replace EAGLE-my/eagle/model/cnet.py with our cnet.py, in which we add the classifier in the decoder layer for resampling.
+1. replace EAGLE-my/eagle/model/cnet.py with our cnet.py, in which we add the classifier in the decoder layer for resampling.
+2. To generate the safe output, run:
+```
+python code.py 
+```
 
