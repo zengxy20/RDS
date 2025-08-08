@@ -6,7 +6,7 @@ We train the classifier based on the work "On Prompt-Driven Safeguarding for Lar
 ```
 bash scripts/forward.sh
 ```
-2. Replace the evaluate.py with our released one, as we only use the hidden state of the original queries without any safety prompt.
+2. Replace the estimate.py with our released one, as we only use the hidden state of the original queries without any safety prompt.
 3. To Train the classifier, run:
 ```
 python estimate.py \
